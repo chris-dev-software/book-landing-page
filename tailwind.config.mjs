@@ -6,7 +6,8 @@ export default {
 			colors: {
 				primary: "#1B3764",
 				secondary: "#FFCA42",
-				degradate: "#F6F8FC"
+				degradate: "#F6F8FC",
+				paragraph: "#B4C7E7"
 			}
 		},
 		fontFamily: {

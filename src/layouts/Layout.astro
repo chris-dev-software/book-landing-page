@@ -21,6 +21,7 @@ import Linkedin from "../icons/Linkedin.astro"
 import Twitter from "../icons/Twitter.astro"
 import Cart from "../icons/Cart.astro"
 import ArrowDown from "../icons/ArrowDown.astro"
+import PrimaryButton from "../components/buttons/PrimaryButton.astro"
 
 ---
 
@@ -35,7 +36,7 @@ import ArrowDown from "../icons/ArrowDown.astro"
 		<title>{title}</title>
 	</head>
 	<body>
-		<header class="fixed top-0 left-0 w-full">
+		<header class="sticky top-0 left-0 w-full">
 			<div class="max-w-7xl mx-auto h-20 flex items-center justify-between">
 				<div class="flex items-center gap-8">
 					<div class="flex items-center gap-2">
@@ -43,13 +44,13 @@ import ArrowDown from "../icons/ArrowDown.astro"
 						<h1 class="text-white font-inter text-2xl font-bold tracking-wide">Pages</h1>
 					</div>
 					<div class="flex items-center gap-2">
-						<a class="bg-white size-10 flex items-center justify-center" href="">
+						<a class="bg-white hover:bg-degradate transition-colors size-10 flex items-center justify-center" href="">
 							<Facebook class="text-primary size-4"/>
 						</a>
-						<a class="bg-white size-10 flex items-center justify-center" href="">
+						<a class="bg-white hover:bg-degradate transition-colors size-10 flex items-center justify-center" href="">
 							<Twitter class="size-4 text-primary"/>
 						</a>
-						<a class="bg-white size-10 flex items-center justify-center" href="">
+						<a class="bg-white hover:bg-degradate transition-colors size-10 flex items-center justify-center" href="">
 							<Linkedin class="size-4 text-primary"/>
 						</a>
 					</div>
@@ -57,22 +58,22 @@ import ArrowDown from "../icons/ArrowDown.astro"
 	
 				<nav class="flex items-center gap-8">
 					<ul class="font-inter flex items-center gap-10">
-						<li class="text-white">
+						<li class="text-white hover:text-degradate transition-colors">
 							<a href="">Home</a>
 						</li>
-						<li class="text-white">
+						<li class="text-white hover:text-degradate transition-colors">
 							<a class="flex items-center" href="" >
 								Pages
 								<ArrowDown class="size-4"/>
 							</a>
 						</li>
-						<li class="text-white">
+						<li class="text-white hover:text-degradate transition-colors">
 							<a href="">About</a>
 						</li>
-						<li class="text-white">
+						<li class="text-white hover:text-degradate transition-colors">
 							<a href="">Services</a>
 						</li>
-						<li class="text-white">
+						<li class="text-white hover:text-degradate transition-colors">
 							<a href="">Contact</a>
 						</li>
 					</ul>
@@ -83,10 +84,8 @@ import ArrowDown from "../icons/ArrowDown.astro"
 							01
 						</div>
 					</button>
-	
-					<button class="bg-secondary font-cardo text-primary px-6 py-2 font-bold">
-						Order Today
-					</button>
+				
+					<PrimaryButton content="Today"/>
 					
 				</nav>
 			</div>

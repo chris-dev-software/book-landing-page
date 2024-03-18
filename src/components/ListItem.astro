@@ -1,0 +1,9 @@
+---
+const {title, content} = Astro.props
+---
+
+<li class="grid grid-cols-[12px_auto] items-center gap-x-2">
+  <div class="bg-secondary size-3 rounded-full"/>
+  <h4 class="text-white font-cardo text-xl">{title}</h4>
+  <p class="col-start-2 text-paragraph font-inter text-sm">{content}</p>
+</li>
