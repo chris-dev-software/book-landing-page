@@ -1,0 +1,105 @@
+---
+interface Props {
+	title: string;
+}
+// TIPOGRAFIA CARDO 
+import '@fontsource/cardo/400.css';
+import '@fontsource/cardo/700.css';
+
+
+//TIPOGRAFIA INTER
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+
+const { title } = Astro.props;
+
+import Logo from "../icons/Logo.astro"
+import Facebook from "../icons/Facebook.astro"
+import Linkedin from "../icons/Linkedin.astro"
+import Twitter from "../icons/Twitter.astro"
+import Cart from "../icons/Cart.astro"
+import ArrowDown from "../icons/ArrowDown.astro"
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Lading page for book store" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="fixed top-0 left-0 w-full">
+			<div class="max-w-7xl mx-auto h-20 flex items-center justify-between">
+				<div class="flex items-center gap-8">
+					<div class="flex items-center gap-2">
+						<Logo class="text-secondary"/>
+						<h1 class="text-white font-inter text-2xl font-bold tracking-wide">Pages</h1>
+					</div>
+					<div class="flex items-center gap-2">
+						<a class="bg-white size-10 flex items-center justify-center" href="">
+							<Facebook class="text-primary size-4"/>
+						</a>
+						<a class="bg-white size-10 flex items-center justify-center" href="">
+							<Twitter class="size-4 text-primary"/>
+						</a>
+						<a class="bg-white size-10 flex items-center justify-center" href="">
+							<Linkedin class="size-4 text-primary"/>
+						</a>
+					</div>
+				</div>
+	
+				<nav class="flex items-center gap-8">
+					<ul class="font-inter flex items-center gap-10">
+						<li class="text-white">
+							<a href="">Home</a>
+						</li>
+						<li class="text-white">
+							<a class="flex items-center" href="" >
+								Pages
+								<ArrowDown class="size-4"/>
+							</a>
+						</li>
+						<li class="text-white">
+							<a href="">About</a>
+						</li>
+						<li class="text-white">
+							<a href="">Services</a>
+						</li>
+						<li class="text-white">
+							<a href="">Contact</a>
+						</li>
+					</ul>
+	
+					<button class="text-white relative">
+						<Cart class="size-6"/>
+						<div class="absolute -top-2 -right-2 w-5 h-5 flex items-center justify-center bg-secondary text-primary font-inter font-bold text-xs rounded-full">
+							01
+						</div>
+					</button>
+	
+					<button class="bg-secondary font-cardo text-primary px-6 py-2 font-bold">
+						Order Today
+					</button>
+					
+				</nav>
+			</div>
+		</header>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	body{
+		@apply bg-primary
+	}
+
+	html{
+		scroll-behavior: smooth;
+	}
+</style>
